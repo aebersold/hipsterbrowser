@@ -1,6 +1,20 @@
+@font-face {
+    font-family: 'entypo';
+    src: url('../fonts/entypo.eot');
+    src: url('../fonts/entypo.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/entypo.woff') format('woff'),
+         url('../fonts/entypo.ttf') format('truetype'),
+         url('../fonts/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body {
 	width:100%;
 	height:100%;
+	min-width: 320px;
+	overflow: hidden;
 	background: url('../img/snakes.jpeg');
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -12,13 +26,48 @@ html, body {
 }
 
 .browser {
+	position:relative;
 	height:24px;
 	padding:20px 0;
 	background-color: rgba(255,255,255,0.7);
 
+	span {
+		font-family: 'entypo';
+		font-size: 50px;
+		float:left;
+	}
+
 	form {
-		width:940px;
+		width:70%;
 		margin:0 auto;
+
+		input {
+			border:1px solid #fff;
+			background-color:#fff;
+			position: absolute;
+			top:20px;
+
+			height:20px;
+			padding:2px;
+		}
+
+		i {
+			font-family: 'entypo';
+			font-size: 50px;
+			line-height:26px;
+			display:block;
+			height:26px;
+			width:14px;
+			padding:0 5px;
+
+			position: relative;
+			top:0px;
+			left:220px;
+			font-style: normal;
+			background-color:#eee;
+
+			cursor: pointer;
+		}
 	}
 }
 
@@ -30,6 +79,10 @@ iframe.hipsterframe {
 	width:100%;
 	border:none;
 	-webkit-filter: sepia(50%);
+	-moz-filter: sepia(50%);
+	-o-filter: sepia(50%);
+	-ms-filter: sepia(50%);
+	filter: sepia(50%);
 }
 
 
@@ -48,14 +101,41 @@ iframe.hipsterframe {
 			font-weight: 400;
 		}
 
+		form {
+			padding:10px 50px;
+
+			input {
+				border:1px solid #fff;
+				background-color:rgba(255,255,255,0.9);
+				padding:5px;
+				border-radius:3px;
+				box-shadow: 0 0px 3px rgba(0,0,0,0.5);
+			}
+			input[type=text] {
+				width:243px;
+				margin-right:10px;
+			}
+		}
+
 		position: relative;
-		height:100px;
+		height:180px;
 		width:400px;
 		top:50%;
-		margin:-50px auto 0 auto;
+		margin:-90px auto 0 auto;
 
-		background-color: rgba(255,255,255,0.3);
+		background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(229,229,229,0.05) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(229,229,229,0.05)));
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(229,229,229,0.05) 100%);
+		background: -o-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(229,229,229,0.05) 100%);
+		background: -ms-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(229,229,229,0.05) 100%);
+		background: linear-gradient(to bottom,  rgba(255,255,255,0.3) 0%,rgba(229,229,229,0.05) 100%);
 		box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 		border-radius: 5px;
 	}
+
+	#social {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+}
 }

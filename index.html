@@ -9,10 +9,9 @@
 //-->
 <title>Hipsterbrowser</title>
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="browse the web like a hipster.">
+<meta name="description" content="browse the web like a hipster. hipsterbrowser.">
 <meta name="author" content="Simon Aebersold">
 <meta http-equiv="imagetoolbar" content="no" />
-<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/style.css" media="all">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -34,10 +33,10 @@
 
 </head>
 <body class="html5">
-<div class="browser">
-  <form action="" method="get" id="urlform">
-    <input type="text" name="url" id="url" value="www.sbb.ch">
-    <input type="submit" name="go" id="go">
+<div class="browser" style="display:none;">
+  <form action="" method="get" class="urlform">
+    <input type="text" name="url" id="url" placeholder="URL">
+    <i class="btn">&#59230;</i>
   </form>  
 </div>
 <div class="bviewport">
@@ -46,37 +45,8 @@
 
 <!-- le javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/hipster.js" type="text/javascript"></script>
 
-<script>
-$('#urlform').submit(function(event){
-    event.preventDefault();
-    var url = $("#url").val();
-    
-    document.title = 'Hipsterbrowser | ' + url;
-
-    if(url.substr(0,7) != 'http://'){
-        url = 'http://' + url;
-    }
-    if(url.substr(url.length-1, 1) != '/'){
-        url = url + '/';
-    }
-
-    $(".hipsterframe").attr('src',url);
-});
-
-function iframesize() {
-  var vp = $(window).height();
-  vp -= 64;
-  $(".hipsterframe").height(vp);
-}
-
-$(document).ready(function() {
-  iframesize();
-});
-$(window).resize(function() {
-  iframesize();
-});
-</script>
 
 </body>
 </html>
