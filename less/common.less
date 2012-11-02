@@ -31,21 +31,29 @@ html, body {
 	padding:20px 0;
 	background-color: rgba(255,255,255,0.7);
 
-	span {
-		font-family: 'entypo';
-		font-size: 50px;
-		float:left;
-	}
 
 	form {
 		width:70%;
 		margin:0 auto;
+
+		a.home {
+			font-family: 'entypo';
+			font-size: 40px;
+			float:left;
+			line-height:26px;
+			display:inline-block;
+			height:26px;
+			float:right;
+			text-decoration: none;
+			color:black;
+		}
 
 		input {
 			border:1px solid #fff;
 			background-color:#fff;
 			position: absolute;
 			top:20px;
+			width:206px;
 
 			height:20px;
 			padding:2px;
@@ -77,13 +85,10 @@ html, body {
 
 iframe.hipsterframe {
 	width:100%;
+	background-color: #fff;
 	border:none;
-	-webkit-filter: sepia(50%);
-	-moz-filter: sepia(50%);
-	-o-filter: sepia(50%);
-	-ms-filter: sepia(50%);
-	filter: sepia(50%);
 }
+
 
 
 .start {
@@ -99,6 +104,14 @@ iframe.hipsterframe {
 			line-height: 100px;
 			font-family: 'Pacifico', cursive;
 			font-weight: 400;
+		}
+		p {
+			color:white;
+			text-shadow:0 1px 2px #333;
+			text-align: center;
+			-webkit-font-smoothing: antialiased;
+			font-family: 'Helvetica Neue', sans-serif;
+			margin:0;
 		}
 
 		form {
@@ -118,10 +131,10 @@ iframe.hipsterframe {
 		}
 
 		position: relative;
-		height:180px;
+		height:140px;
 		width:400px;
 		top:50%;
-		margin:-90px auto 0 auto;
+		margin:-70px auto 0 auto;
 
 		background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(229,229,229,0.05) 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(229,229,229,0.05)));
@@ -134,8 +147,27 @@ iframe.hipsterframe {
 	}
 
 	#social {
-    position: fixed;
-    bottom: 30px;
-    left: 40px;
-}
+	    position: fixed;
+	    bottom: 30px;
+	    left: 40px;
+	}
+	#copy {
+	    position: fixed;
+	    bottom: 35px;
+	    right: 40px;
+	    opacity: 0.8;
+	    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+	    p {
+	    	margin:0;
+	    	color:white;			
+	    	text-shadow:0 1px 2px #333;
+			-webkit-font-smoothing: antialiased;
+			font-family: 'Helvetica Neue', sans-serif;
+			font-size: 12px;
+	    }
+	    a {
+	    	color:white;
+	    }
+	}
 }

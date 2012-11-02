@@ -31,10 +31,22 @@
   })();
 </script>
 
+<style type="text/css">
+  iframe.go {
+      -webkit-filter: sepia(50%);
+      -moz-filter:url(#Sepia);
+      -o-filter: url(#Sepia);
+      -ms-filter: sepia(50%);
+      filter: url(#Sepia);
+  }
+</style>
+
 </head>
 <body class="html5">
-<div class="browser" style="display:none;">
+
+<div class="browser" style="display:block;">
   <form action="" method="get" class="urlform">
+    <a href="start.html" target="hipsterframe" class="home">&#8962;</a> 
     <input type="text" name="url" id="url" placeholder="URL">
     <i class="btn">&#59230;</i>
   </form>  
@@ -43,9 +55,19 @@
   <iframe src="start.html" name="hipsterframe" frameborder="0" class="hipsterframe"></iframe>
 </div>
 
+<svg id="svg-image-blur">
+    <filter id="Sepia">
+        <feColorMatrix values=" 0.30 0.30 0.30 0 0
+                                0.25 0.25 0.25 0 0
+                                0.20 0.20 0.20 0 0
+                                0.00 0.00 0.00 1 0" />
+    </filter>
+</svg>
+
+
 <!-- le javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script src="js/hipster.js" type="text/javascript"></script>
+<script src="js/hipster-ck.js" type="text/javascript"></script>
 
 
 </body>
